@@ -2,12 +2,20 @@ import React, { Component } from "react";
 import Habit from "./habit";
 
 class Habits extends Component {
+  state = {
+    habits: [
+      { id: 1, name: "Reding", count: 0 },
+      { id: 2, name: "Running", count: 0 },
+      { id: 3, name: "Coding", count: 0 },
+    ],
+  };
+
   render() {
     return (
       <ul>
-        <Habit name="Reading" count={0} />
-        <Habit name="Running" count={0} />
-        <Habit name="Coding" count={0} />
+        {this.state.habits.map((habit) => (
+          <Habit key={habit.id} habit={habit} />
+        ))}
       </ul>
     );
   }

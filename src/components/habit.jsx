@@ -17,8 +17,7 @@ class Habit extends Component {
   handlerDelete = () => {};
 
   render() {
-    const name = this.props.name;
-    const count = this.props.count;
+    const { name, count } = this.props.habit;
     return (
       <li className="habit">
         <span className="habit-name">{name}</span>
