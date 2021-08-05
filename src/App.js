@@ -1,7 +1,12 @@
 import "./App.css";
+import Habit from "./components/habit";
 
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <Habit />
+    </div>
+  );
 }
 
 export default App;
