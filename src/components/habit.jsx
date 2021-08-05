@@ -6,15 +6,16 @@ class Habit extends Component {
   };
 
   handlerIncrease = () => {
-    this.setState({ count: this.state.count + 1 });
+    this.props.onIncrease(this.props.habit);
   };
 
   handlerDecrease = () => {
-    const count = this.state.count;
-    this.setState({ count: count <= 0 ? 0 : this.state.count - 1 });
+    this.props.onDecrease(this.props.habit);
   };
 
-  handlerDelete = () => {};
+  handlerDelete = () => {
+    this.props.onDelete(this.props.habit);
+  };
 
   render() {
     const { name, count } = this.props.habit;
